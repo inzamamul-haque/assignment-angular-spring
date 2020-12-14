@@ -1,0 +1,49 @@
+<section class="content">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Employee Basic Information</h3>
+            <h3 (click)="goToEmployee()" style="display: flex; justify-content: flex-end">Create New Employee <mat-icon>add_task</mat-icon></h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+              <tr>
+                <th>SL.</th>
+                <th>Employee Name</th>
+                <th>Employee Id</th>
+                <th>Address</th>
+                <th>Mobile No</th>
+                <th>Basic Salary</th>
+                <th>Gross Salary</th>
+                <th>House Rent</th>
+                <th>Medical Allowance</th>
+              </tr>
+              </thead>
+              <tbody *ngFor="let item of employeeList; let i = index">
+              <tr>
+                <td>{{i+1}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.employeeId}}</td>
+                <td>{{item.address}}</td>
+                <td>{{item.mobileNo}}</td>
+                <td>{{item.basicSalary}}</td>
+                <td>{{item.grossSalary}}</td>
+                <td>{{item.houseRent}}</td>
+                <td>{{item.medical}}</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+<!-- /.content-wrapper -->

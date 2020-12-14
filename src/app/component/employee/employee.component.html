@@ -1,0 +1,65 @@
+
+
+  <!-- Main content -->
+   <section style="margin-top: 3%" class="content">
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-2">
+
+          </div>
+        <!-- left column -->
+        <div class="col-md-8">
+          <!-- general form elements -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Create New Employee</h3>
+            </div>
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Name</label>
+                  <input [(ngModel)]="name" class="form-control" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                  <label>Employee Id</label>
+                  <input [(ngModel)]="employeeId" class="form-control" placeholder="Enter Id Number">
+                </div>
+                <div class="form-group">
+                  <label>Address</label>
+                  <input [(ngModel)]="address" class="form-control"  placeholder="Enter Address">
+                </div>
+                <div class="form-group">
+                  <label>Mobile Number</label>
+                  <input [(ngModel)]="mobileNumber" class="form-control"  placeholder="Enter Mobile Number">
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Choose Salary Rank</label>
+                      <select [(ngModel)]="salaryRank"   interface="popover" class="form-control">
+                        <option selected="selected" *ngFor="let salary of salaryRanktList" value="{{salary.id}}" >{{salary.name}}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Choose Bank Account</label>
+                <select [(ngModel)]="bankAccount"   interface="popover" class="form-control">
+                  <option selected="selected" *ngFor="let bank of bankAccountList" value="{{bank.id}}" >{{bank.accountName}} - {{bank.accountNo}}</option>
+                </select>
+                </div>
+                  </div>
+                </div>
+            </div>
+
+
+              <div class="card-footer">
+                <button (click)="saveEmployee()" type="submit" class="btn btn-primary">Submit</button>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

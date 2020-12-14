@@ -1,0 +1,39 @@
+<section class="content">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Salary Rank List</h3>
+          <h3 (click)="goToSalary()" style="display: flex; justify-content: flex-end">Create New Salary Rank <mat-icon>add_task</mat-icon></h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+              <th>SL.</th>
+              <th>Name</th>
+              <th>Salary Rank</th>
+              <th>Basic Salary</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let item of salaryRankList; let i = index">
+            <tr>
+              <td>{{i+1}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.rank}}</td>
+              <td>{{item.basicSalary}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</section>
+
+

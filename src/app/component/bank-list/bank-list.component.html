@@ -1,0 +1,41 @@
+<section class="content">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Bank List</h3>
+          <h3 (click)="goToBank()" style="display: flex; justify-content: flex-end">Create New Bank <mat-icon>add_task</mat-icon></h3>
+
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body">
+          <table id="example1" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+              <th>SL.</th>
+              <th>Bank Name</th>
+              <th>Branch Name</th>
+              <th>Bank Code</th>
+            </tr>
+            </thead>
+            <tbody *ngFor="let item of bankList; let i = index">
+            <tr>
+              <td>{{i+1}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.branchName}}</td>
+              <td>{{item.code}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+</section>
+<!-- /.content -->
+<!-- /.content-wrapper -->
+
