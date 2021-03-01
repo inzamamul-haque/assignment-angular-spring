@@ -23,7 +23,7 @@ export class SetBasicAmountComponent implements OnInit {
   }
 
   setBasic() {
-    this.employee.getAllBankAccount().subscribe((res: any){
+    this.employee.getAllBankAccount().subscribe((res: any) => {
       for (let i = 0; i < res.length; i++) {
       this.orderInfo.push({item: res.item});
       }
