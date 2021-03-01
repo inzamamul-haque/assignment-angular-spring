@@ -1,0 +1,56 @@
+<section style="margin-top: 3%" class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+
+      </div>
+      <!-- left column -->
+      <div class="col-md-8">
+        <!-- general form elements -->
+        <div class="card card-primary">
+          <div class="card-header">
+            <h3 class="card-title">Transfer Amount</h3>
+          </div>
+          <div class="card-body">
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label>Company Account</label>
+                <select [(ngModel)]="companyAccount"   interface="popover" class="form-control">
+                  <option selected="selected" *ngFor="let company of companyAccountList" value="{{company.id}}" >{{company.accountName}} - {{company.accountNo}}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+            <div class="form-group">
+              <label>Transfer Amount</label>
+              <input [(ngModel)]="amount" class="form-control" placeholder="Enter Amount">
+            </div>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>Employee Bank Account</label>
+                  <select [(ngModel)]="employeeAccount"   interface="popover" class="form-control">
+                    <option selected="selected" *ngFor="let bank of bankAccountList" value="{{bank.id}}" >{{bank.accountName}} - {{bank.accountNo}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div class="card-footer">
+              <button (click)="sendMoney()" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
